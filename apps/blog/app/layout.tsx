@@ -1,4 +1,10 @@
 import * as React from 'react';
+import { Poppins } from '@next/font/google';
+
+const poppins = Poppins({
+  weight: ['200', '400', '700'],
+  style: ['italic', 'normal']
+})
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -8,7 +14,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body>
+      <body className={poppins.className}>
         {children}
       </body>
     </html>
